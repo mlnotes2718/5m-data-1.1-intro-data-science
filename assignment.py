@@ -15,6 +15,14 @@ def fizz_buzz(number):
     >>> fizz_buzz(15)
     'FizzBuzz'
     """
+
+    if (number % 3 == 0) & (number % 5 == 0):
+        return 'FizzBuzz'
+    elif number % 3 == 0:
+        return 'Fizz'
+    elif number % 5 == 0:
+        return 'Buzz'
+
     return
 
 
@@ -30,7 +38,14 @@ def sum_of_squares(numbers):
     >>> sum_of_squares([2, 4, 6])
     56
     """
-    return
+
+    sum_of_squares = 0
+    for each in numbers:
+        squared  = each ** 2
+        sum_of_squares += squared
+    return sum_of_squares
+
+
 
 
 # Question 3
@@ -45,7 +60,13 @@ def count_vowels(string):
     >>> count_vowels("aeiou")
     5
     """
-    return
+    vowels_list = 'aeiou'
+    vowels_count = 0
+    for each in string:
+        if each in vowels_list:
+            vowels_count += 1
+    
+    return vowels_count
 
 
 # Question 4
@@ -60,7 +81,32 @@ def count_repeats(string):
     >>> count_repeats("aeiou")
     0
     """
-    return
+    """
+    Thomas Tay Note:
+    The test example above did not consider multiple repeated characters such as "heello"
+    Will interpret the requirement as below:
+    - Count repeated characters for each character.
+    - If a character is repeated more than once, count as 1.
+    - Store all chracters and its count in a dictionary.
+    - Will return the count of the character that is repeated the most.
+    """
+    repeated_dic = {}
+    most_repeated_count = 0
+    # Count each chracter and store the counts in a dictionary
+    for each_character in string:
+        if each_character in repeated_dic:
+            repeated_dic[each_character] += 1
+        else:
+            repeated_dic[each_character] = 1
+
+    # Find the character count that is repeated the most
+    for key,value in repeated_dic.items():
+        if value > 1:
+            if value > most_repeated_count:
+                most_repeated_count = value 
+
+    return most_repeated_count
+
 
 
 if __name__ == "__main__":
