@@ -2,7 +2,7 @@
 
 ## Hardware Requirements
 - Desktop/laptop computer running the latest version of macOS/Linux/Windows operating system (OS)
-- Recommended 8GB onboard memory (RAM)
+- Recommended 16GB onboard memory (RAM) 
 - Recommended 50GB available hard disk storage space (HDD/SSD)
 - Webcam and microphone for online Zoom sessions
 
@@ -11,7 +11,6 @@
 - WSL (for Windows users only)
 - Visual Studio Code (VSCode) or any source code editor
 - Git Command-Line Interface (CLI)
-- GitHuB CLI 
 - Conda/Miniconda
 - DBeaver database viewer
 
@@ -25,6 +24,12 @@ Most software engineering and development tools are initially developed for Linu
 You must be running Windows 11 or 10 version 2004 and higher. 
 
 Follow the instructions [here](https://learn.microsoft.com/en-us/windows/wsl/install) to install Ubuntu on WSL.
+
+You can access your WSL files using regular Windows applications, such as File Explorer. While you in your Linux directory, type: 
+
+`explorer.exe .`
+
+Read this [tutorial](https://learn.microsoft.com/en-us/windows/wsl/filesystems) to find out how it works.
 
 ## Visual Studio Code (VSCode)
 
@@ -51,49 +56,9 @@ We will be using Git extensively in this course and you will need to install the
 
 ### Download and install Git CLI [here](https://git-scm.com/downloads).
 
-> Windows WSL users, please follow instructions for Linux/Unix
+Windows WSL users, read and follow the steps in this tutorial [Get Started using Git on WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git). *You may ignore the Azure setup.*
 
-## GitHub CLI
 
-GitHub is not the same as Git! 😉
-
-You will need to access your GitHub account from your computer and the GitHub CLI tool simplifies the process of authentication in order to allow Git to manage the files in your account, e.g. `git clone`, `git pull`, `git commit`. 
-
-### Download and install GitHub CLI [here](https://github.com/cli/cli?tab=readme-ov-file#installation).
-
-### TLDR; 
-
-On Linux/WSL Ubuntu using APT package manager:
-
-`sudo apt install gh`
-
-On macOS using Homebrew:
-
-`brew install gh`
-
-### Setup your GitHub Credentials
-
-You will need to authenticate your GitHub account to allow access your files in your repository. 
-
-Type the following command:
-
-`gh auth login`
-
-Follow the on-creen instructions.
-
-1. Select `GitHub.com` as your login account.
-
-2. Select `HTTPS` as your preferred protocal.
-
-3. Select `y` to authenticate Git with your GitHub credentials.
-
-4. Select `Login with a web browser` to authenticate your account.
-
-A one-time code (e.g. 1A23-B567) will be displayed on your terminal. 
-
-Login to your GitHub account with your web browser. After you have logged into your GitHub account, key in the one-time code given earlier.
-
-You should now be able to access your GitHub account using Git CLI commands from your local computer.
 
 ## Conda/Miniconda
 
@@ -105,13 +70,9 @@ Conda is a package and environment manager that we will be using throughout this
 
 ## DBeaver
 
-We will be using DBeaver SQL client throughout this course to connect to databases and write SQL code. The free version is called DBeaver Community (dbeaver-ce).
+We will be using DBeaver SQL client throughout this course to connect to databases and write SQL code. The free version is called DBeaver Community 
 
-### Download and install DBeaver Community [here](https://dbeaver.io/download/)
+Download and install DBeaver Community [here](https://dbeaver.io/download/).
 
-> Windows WSL users, please follow instructions for Linux/Unix.
->
-> Use the Snap package manager `sudo snap install dbeaver-ce`
-
-
+Windows WSL users are able to run the regular Windows version of DBeaver and access the database files stored in the WSL file system.
 
