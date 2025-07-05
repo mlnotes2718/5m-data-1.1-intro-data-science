@@ -66,7 +66,9 @@ Conda is a package and environment manager that we will be using throughout this
 
 ### Download and install miniconda [here](https://www.anaconda.com/docs/getting-started/miniconda/main)
 
-> Windows WSL users, please follow instructions for Linux/Unix
+Windows WSL users, please follow instructions for **Linux/Unix**. You must install miniconda in your WSL **Ubuntu** environment, not Winodws.
+
+To verify this, your conda command prompt should show `(base) $`
 
 ## DBeaver
 
